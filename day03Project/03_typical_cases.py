@@ -2,3 +2,9 @@
 # 玩家：player（玩家手工输入石头0、剪刀1、布2）
 # 电脑：computer（随机出拳）
 
+# 随机模块的使用
+# 1. 导入模块
+import random
+# 2. 基于模块中的randint(start, stop)闭区间，规定随机数范围
+randnum = random.randint(0, 2)  # 0, 1, 2
+print(randnum)
