@@ -21,3 +21,4 @@ elif age >= 36 and age <= 59:
     print('您的年龄是中年')
 else:
     print('您的年龄是老年')
+
