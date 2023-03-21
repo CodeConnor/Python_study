@@ -8,7 +8,12 @@ print('成年请进，未成年禁止通过')
 age = int(input('请输入您的年龄：'))
 if age >= 18:
     print('pass')
-else:
-    print('fail')
+print('成年请进，未成年禁止通过')
 
 # if..else二选一结构
+age = int(input('请输入您的年龄：'))
+if age >= 18:
+    print('pass')
+else:
+    print('fail')
+print('成年请进，未成年禁止通过')
