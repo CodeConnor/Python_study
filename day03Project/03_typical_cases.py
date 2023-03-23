@@ -22,9 +22,9 @@ import random  # 导入随机模块
 win = 0
 lose = 0
 equal = 0
-# 循环体，十次循环
+# 循环体，5次循环
 i = 1
-while i <= 10:
+while i <= 5:
     # 展示玩家出拳
     player = int(input('请出拳（玩家手工输入石头0、剪刀1、布2）：'))
     if player == 0:

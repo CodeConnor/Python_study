@@ -1,5 +1,5 @@
 # 遍历字符串，打印每个字母
-for i in str('xiaobang'):
+for i in 'xiaobang':
     print(i)
 
 # 使用for循环求1-100的和，range方法
