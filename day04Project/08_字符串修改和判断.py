@@ -13,4 +13,8 @@ list1 = ['apple', 'banana', 'orange']
 print('-'.join(list1))  # 拼接符号在前
 
 # 输入字符串并判断是否是纯数字，是则返回数字，反之返回error
-
+user_input = input('请输入数字：')
+if user_input.isdigit():
+    print(user_input)
+else:
+    print('error，请输入数字')
