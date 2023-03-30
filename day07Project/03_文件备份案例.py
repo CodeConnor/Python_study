@@ -12,7 +12,7 @@ old_f = open(oldname, 'rb')
 new_f = open(newname, 'wb')
 # 读取文件，写入内容
 while True:
-    content = old_f.read(1024)
+    content = old_f.read(1024)  # r模式size代表字符长度,rb模式size代表字节大小 => 1KB
     if not content:
         break
     new_f.write(content)
