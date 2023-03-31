@@ -35,32 +35,35 @@ def gender(a='男'):
     print(f'所选性别为：{a}')
 
 
-
 gender()
 gender('女')
+
 
 # ------------------------------------------------------------5
 # 要求实现一段代码：
 # 声明一个函数num1，并且在调用函数的时候，
 # 不管输入多少个非关键字参数，函数都可以运行，
 # 且在函数内部还要把每个参数输出到屏幕上。
-def num1(*args, **kwargs):
+def num1(*args):
     for i in args:
         print(i)
 
-a = input('请输入参数：')
-num1(a)
+
+num1(1, 2, 3)
+
 
 # ------------------------------------------------------------6
 # 如下所示这是一个字典，{"name":"电脑","price":7000}
 # 请定义这样一个函数num2，讲上述字典中的键值对传入到函数num中
 # 要求用不定长参数来接收，并在函数中打印键值对输出
-# 输出格式为：key：”name“   value：“电脑”
-#           key：“price”    value：7000
+# 输出格式为：key：name   value：电脑
+#           key：price    value：7000
 def num2(**kwargs):
-    print(f'key:{key}  value:{value}')
+    for key, value in kwargs.items():
+        print(f'key:{key}  value:{value}')
 
-dict1 = {"name":"电脑","price":7000}
+
+dict1 = {"name": "电脑", "price": 7000}
 for key, value in dict1.items():
     num2(key=value)
 
@@ -77,8 +80,7 @@ def num3(*args, **kwargs):
     for key, value in kwargs.items():
         print(f'key:{key}  value:{value}')
 
-num3(1,2,a=3,b=4)
-num3(3,4,5,6,a=1)
-num3(a=1,b=2)
 
-
+num3(1, 2, a=3, b=4)
+num3(3, 4, 5, 6, a=1)
+num3(a=1, b=2)
