@@ -23,21 +23,15 @@ def is_digit(user_str):
         num = int(user_str)
         return num
     except:
-        print('输入错误，请按提示输入正确内容！')
-        return 'error'
+        return
 
 
 # 系统的调用
 while True:
     menu()
     user_str = input('请按照提示输入数字：')
-    result = is_digit(user_str)
-    user_num = 0
-    # 判断输入内容是否是纯数字，注意isdigit的对象只能是str
-    if user_str.isdigit():
-        user_num = result
-    else:
-        continue  # 如果不是数字直接开始下次循环，不进行以下判断
+    # 判断输入内容是否是纯数字
+    user_num = is_digit(user_str)
 
     if user_num == 1:
         pass
