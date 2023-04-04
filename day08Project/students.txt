@@ -1,1 +1,1 @@
-[{'name': 'xiaohua', 'age': 20, 'gender': 'female'}, {'name': 'Lily', 'age': 18, 'gender': 'female'}, {'name': 'Lihua', 'age': 23, 'gender': 'male'}]
+[{'name': 'lihua', 'age': 23, 'gender': 'male'}]

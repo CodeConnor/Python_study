@@ -1,3 +1,4 @@
+import os
 # 定义列表存储学生信息
 students = []
 
@@ -11,7 +12,7 @@ def menu():
     print('【3】修改学生信息')
     print('【4】查询学生信息')
     print('【5】显示所有学生信息')
-    print('【6】保存数据到系统')
+    print('【6】保存数据到文件')
     print('【7】加载数据到系统')
     print('【8】退出系统')
     print('-' * 40)
@@ -151,6 +152,24 @@ def save_data_to_file():
     f.close()
 
 
+# 定义load_data_to_sys函数，实现加载文件数据到系统中
+def load_data_to_sys():
+    global students
+    # 判断文件是否存在，防止打开文件报错
+    if not os.path.exists('students.txt'):
+        print('【文件不存在，请先保存数据至文件！】')
+    else:
+        f = open('students.txt', 'r', encoding='utf-8')
+        content = f.read()
+        # 判断文件是否为空
+        if not content:
+            print('【文件为空，请先保存数据至文件！】')
+        else:
+            # content为str，需要将其转换为list
+            students = eval(content)
+            print('【数据加载成功！】')
+
+
 # 系统的调用
 while True:
     menu()
@@ -171,7 +190,7 @@ while True:
     elif user_num == 6:
         save_data_to_file()
     elif user_num == 7:
-        pass
+        load_data_to_sys()
 
     # 退出系统
     elif user_num == 8:
