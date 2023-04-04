@@ -31,7 +31,15 @@ def add_stu():
     while True:
         global students
         name = input('请输入学生姓名：')
-        age = int(input('请输入学生年龄：'))
+        # 判断是否输入的是数字
+        while True:
+            age_str = input('请输入学生年龄：')
+            age = is_digit(age_str)
+            if not age:
+                print('【输入错误，请按提示输入正确内容！】')
+                continue
+            else:
+                break
         gender = input('请输入学生性别：')
         # 将信息存入字典和列表
         student = {}
@@ -75,7 +83,15 @@ def alter_stu():
             if i['name'] == alter_name:
                 # 提示输入修改信息
                 name = input('请输入新学生姓名：')
-                age = int(input('请输入新学生年龄：'))
+                # 判断是否输入的是数字
+                while True:
+                    age_str = input('请输入学生年龄：')
+                    age = is_digit(age_str)
+                    if not age:
+                        print('【输入错误，请按提示输入正确内容！】')
+                        continue
+                    else:
+                        break
                 gender = input('请输入新学生性别：')
                 # 修改students列表内的字典
                 i['name'] = name
@@ -99,7 +115,7 @@ def select_stu():
         select_name = input('请输入所要查询的学生姓名：')
         for i in students:
             if i['name'] == select_name:
-                print(i)
+                print(f'姓名：{i["name"]}, 年龄：{i["age"]}, 性别：{i["gender"]}')
                 break
         else:
             print('【很抱歉，查询不到该学生！】')

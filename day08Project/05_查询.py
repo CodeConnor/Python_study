@@ -7,7 +7,7 @@ while True:
     select_name = input('请输入所要查询的学生姓名：')
     for i in students:
         if i['name'] == select_name:
-            print(i)
+            print(f'姓名：{i["name"]}, 年龄：{i["age"]}, 性别：{i["gender"]}')
             break
     else:
         print('【很抱歉，查询不到该学生！】')
