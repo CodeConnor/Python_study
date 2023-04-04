@@ -26,6 +26,47 @@ def is_digit(user_str):
         return
 
 
+# 定义add_stu函数，实现添加学生信息
+def add_stu():
+    while True:
+        user_cmd = input('--输入任意键继续--\n--输入q或者Q退出--\n:')
+        # 判断退出或继续
+        if user_cmd == 'q' or user_cmd == 'Q':
+            break
+        else:
+            name = input('请输入学生姓名：')
+            age = int(input('请输入学生年龄：'))
+            gender = input('请输入学性别：')
+            # 将信息存入字典和列表
+            student = {}
+            student['name'] = name
+            student['age'] = age
+            student['gender'] = gender
+            global students
+            students.append(student)
+
+
+# 定义del_stu函数，实现删除学生信息
+def del_stu():
+    while True:
+        user_cmd = input('--输入任意键继续--\n--输入q或者Q退出--\n:')
+        # 判断退出或继续
+        if user_cmd == 'q' or user_cmd == 'Q':
+            break
+        else:
+            del_name = input('请输入所要删除的学生姓名：')
+            # 遍历学生列表
+            for i in students:
+                # 判断学生姓名是否存在
+                if i['name'] == del_name:
+                    students.remove(i)
+                    print(f'【{del_name}】信息已成功删除！')
+                    break
+            # 遍历完成后，没查询到（没有break）时进行提示
+            else:
+                print('很抱歉，查询不到该学生！')
+
+
 # 系统的调用
 while True:
     menu()
@@ -34,9 +75,9 @@ while True:
     user_num = is_digit(user_str)
 
     if user_num == 1:
-        pass
+        add_stu()
     elif user_num == 2:
-        pass
+        del_stu()
     elif user_num == 3:
         pass
     elif user_num == 4:
