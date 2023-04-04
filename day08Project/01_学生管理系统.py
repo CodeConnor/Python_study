@@ -34,6 +34,7 @@ def add_stu():
         # 判断是否输入的是数字
         while True:
             age_str = input('请输入学生年龄：')
+            # 嵌套使用函数is_digit来判断
             age = is_digit(age_str)
             if not age:
                 print('【输入错误，请按提示输入正确内容！】')
@@ -137,6 +138,19 @@ def show_all_stu():
             print(f'姓名：{i["name"]}, 年龄：{i["age"]}, 性别：{i["gender"]}')
 
 
+# 定义save_data_to_file函数，实现保存数据到txt文件
+def save_data_to_file():
+    global students
+    f = open('students.txt', 'w', encoding='utf-8')
+    # 判断列表是否为空
+    if not students:
+        print('【暂无数据需要保存！】')
+    else:
+        f.write(str(students))
+        print('【数据保存成功！】')
+    f.close()
+
+
 # 系统的调用
 while True:
     menu()
@@ -155,7 +169,7 @@ while True:
     elif user_num == 5:
         show_all_stu()
     elif user_num == 6:
-        pass
+        save_data_to_file()
     elif user_num == 7:
         pass
 
