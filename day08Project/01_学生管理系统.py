@@ -58,7 +58,7 @@ def del_stu():
                 break
         # 遍历完成后，没查询到（没有break）时进行提示
         else:
-            print('很抱歉，查询不到该学生！')
+            print('【很抱歉，查询不到该学生！】')
 
         user_cmd = input('【输入任意键继续】\n【输入q或者Q退出】\n:')
         # 判断退出或继续
@@ -85,7 +85,7 @@ def alter_stu():
                 break
         # 遍历完成后，没查询到（没有break）时进行提示
         else:
-            print('很抱歉，查询不到该学生！')
+            print('【很抱歉，查询不到该学生！】')
 
         user_cmd = input('【输入任意键继续】\n【输入q或者Q退出】\n:')
         # 判断退出或继续
@@ -102,12 +102,23 @@ def select_stu():
                 print(i)
                 break
         else:
-            print('很抱歉，查询不到该学生！')
+            print('【很抱歉，查询不到该学生！】')
 
         user_cmd = input('【输入任意键继续】\n【输入q或者Q退出】\n:')
         # 判断退出或继续
         if user_cmd == 'q' or user_cmd == 'Q':
             break
+
+
+# 定义show_all_stu函数，实现展示所有学生信息
+def show_all_stu():
+    # 判断students是否为空
+    if not students:
+        print('【暂无学生信息！】')
+    # 非空则输出所有信息
+    else:
+        for i in students:
+            print(f'姓名：{i["name"]}, 年龄：{i["age"]}, 性别：{i["gender"]}')
 
 
 # 系统的调用
@@ -126,7 +137,7 @@ while True:
     elif user_num == 4:
         select_stu()
     elif user_num == 5:
-        pass
+        show_all_stu()
     elif user_num == 6:
         pass
     elif user_num == 7:
@@ -134,9 +145,9 @@ while True:
 
     # 退出系统
     elif user_num == 8:
-        print('已成功退出系统，欢迎下次使用！')
+        print('【已成功退出系统，欢迎下次使用！】')
         break
 
     # 当用户输入错内容时，返回功能提示菜单
     else:
-        print('输入错误，请按提示输入正确内容！')
+        print('【输入错误，请按提示输入正确内容！】')
