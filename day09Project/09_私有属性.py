@@ -16,3 +16,9 @@ class Girl(object):
 
 # 实例化
 p1 = Girl('Lily')
+# print(p1.name)  # 直接访问私有属性会报错
+# print(p1.age)
+
+# 通过接口访问私有属性
+print(p1.getAge())
+print(p1.getName())
