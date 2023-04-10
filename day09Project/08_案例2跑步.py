@@ -20,7 +20,6 @@ class Person(object):
         self.__weight += 0.20
 
 
-
 # 实例化对象
 Lihua = Person('Lihua', 75)
 print(Lihua)
