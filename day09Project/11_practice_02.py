@@ -50,10 +50,14 @@ class Home(object):
 
     # 输出房间信息
     def __str__(self):
-        f_name = []
-        for i in self.__items:
-            f_name.append(i.getFurniture())
-        home_info = f'Furniture placed in the house: {f_name}\nRemaining area: {self.__area}㎡'
+        home_info = f'Remaining area: {self.__area}㎡\n'
+        # 判断是否存放家具
+        if len(self.__items) > 0:
+            f_name = []
+            # 遍历家具列表，添加家具信息
+            for i in self.__items:
+                f_name.append(i.getFurniture())
+            home_info += f'Furniture placed in the house: {f_name}'
         return home_info
 
 
