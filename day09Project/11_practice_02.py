@@ -77,8 +77,12 @@ while i != 'q':
 # 实例化房屋对象
 house1 = Home(20)
 print(house1)
+# 遍历list1中存储的家具对象
 for i in list1:
+    # 打印家具信息
     print(i)
+    # 添加家具
     house1.addFurniture(i)
+    # 打印房屋信息
     print(house1)
 

@@ -1,7 +1,5 @@
 # 模拟使用ATM取款
 # 银行 => ATM取款 => ①插卡②用户验证③输入取款金额④取款⑤打印账单
-
-# 不使用私有方法时
 class ATM1(object):
     def __card(self):
         print('插卡')
