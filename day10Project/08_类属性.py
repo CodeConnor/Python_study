@@ -12,7 +12,7 @@ class Person(object):
 
 p1 = Person('Tom', 23)
 P2 = Person('Lily', 20)
-
+# 可以在类的外部直接操作类属性，但不推荐，建议使用类方法
 print(f'一共创建了{Person.count}个对象')
 
 
