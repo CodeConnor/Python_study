@@ -4,6 +4,7 @@
 def login(fn):
     def inner():
         input('请先登录：')
+        fn()
     return inner
 
 # comment函数
