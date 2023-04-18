@@ -12,7 +12,6 @@ def sum_num(num1, num2):
     result = num1 + num2
     print(f'sum = {result}')
 
-
 sum_num(10, 30)
 
 
@@ -33,6 +32,5 @@ def sum_args(*args, **kwargs):
     for value in kwargs.values():  # 取字典的值
         result += value
     print(f'sum = {result}')
-
 
 sum_args(10, 20, 30, a=40, b=50)
