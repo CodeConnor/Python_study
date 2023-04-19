@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 表单标签</title>
+</head>
+<!--
+    <label>标签用于创建一个表单标签，通常和<input>元素配合使用
+    <input>元素用于创建一个用户可编辑的表单控件。
+    <input>元素后面可以跟一个type属性，来指定控件的类型。
+    常用的type属性值包括：
+    text：创建一个文本输入框，允许用户输入任意文本。
+    password：创建一个密码输入框，输入的内容会被隐藏。
+    checkbox：创建一个复选框，允许用户选择一个或多个选项。
+    radio：创建一个单选框，允许用户在一组选项中选择一个。
+    submit：创建一个提交按钮，用于提交表单数据。
+    reset：创建一个重置按钮，用于清空表单数据。
+
+    form的常用属性：
+    action：定义表单提交的 URL
+    method：定义表单提交的 HTTP 方法，常用的值有 GET 和 POST
+    target：定义表单提交后响应的窗口，常用的值有 `_self`（在当前窗口响应）和 `_blank`（在新窗口响应）
+
+-->
+<body>
+    <form action="http://www.baidu.com" method="post" target="_blank">
+        <label for="username">username: </label><input type="text" id="username">
+        <!-- 
+            这里，<label>标签中的for属性指定了与之关联的表单元素的ID，
+            即输入框的id="username"，当用户点击标签名称“username：”时，输入框会高亮显示 
+        -->
+        <br><br>
+        <label>password: </label><input type="password">
+        <br><br>
+        <label>gender: </label>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <br><br>
+        <label>hobby: </label>
+        <input type="checkbox" name="gender">jogging
+        <input type="checkbox" name="gender">swimming
+        <input type="checkbox" name="gender">surfing
+        <br><br>
+        <label>birth year: </label>
+        <!-- <select> 是 HTML 中用来创建下拉列表的标签 -->
+        <select>
+            <!-- <option> 标签用于定义下拉列表中的选项 -->
+            <option>1991</option>
+            <option>1992</option>
+            <option>1993</option>
+        </select>
+        <br><br>
+        <lable>summary: </lable>
+        <br>
+        <!-- <textarea> 标签是 HTML 中用来创建文本输入框的标签，可以用来接收多行文本输入 -->
+        <textarea cols="40" rows="5"></textarea>
+        <br><br>
+        <input type="submit" value="submit"><input type="reset" value="reset">
+    </form>
+</body>
+</html>
