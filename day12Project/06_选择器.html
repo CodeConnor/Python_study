@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style type="text/css">
+        /* 标签选择器 */
+        p {
+            color: red;
+        }
+        
+        /* id选择器 */
+        #my-element {
+            background-color: yellow;
+        }
+        
+        /* 类选择器 */
+        .my-class {
+            background-color: pink;
+        }
+
+        /* 层级选择器 */
+        div p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>tittle tittle</h1>
+    <br>
+    <p>eg.标签选择器 paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, </p>
+    <br>
+    <p id="my-element">eg.id选择器 paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, paragraph, </p>
+    <br>
+    <div class="my-class">eg.类选择器 div1, div1, div1, div1, div1, div1, div1, div1, div1, div1, div1, div1, div1, div1, </div>
+    <div>div2, div2, div2, div2, div2, div2, div2, div2, div2, div2, div2, div2, div2, div2, </div>
+    <div class="my-class">div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 div3 </div>
+    <br>
+    <div>
+        <p>eg.层级选择器 paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph </p>
+    </div>
+    
+</body>
+</html>
