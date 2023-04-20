@@ -25,6 +25,23 @@
         div p {
             color: blue;
         }
+
+        /* 组选择器 */
+        #header, .content, span {
+            background-color: chartreuse;
+        }
+
+        /* 伪类选择器 */
+        #box {
+            width:400px;
+            height:100px;
+            background-color:red;
+        }
+        /* 鼠标hover悬停效果 */
+        #box:hover {
+            color: white;
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +57,16 @@
     <br>
     <div>
         <p>eg.层级选择器 paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph </p>
+    </div>
+    <br>
+    <div>
+        <h2 id="header">eg.组选择器</h2>
+        <section class="content">paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph </section>
+        <span>paragraph paragraph paragraph paragraph paragraph </span>
+    </div>
+    <br>
+    <div id="box">
+        <h2>eg.伪类选择器</h2>
     </div>
     
 </body>
