@@ -10,7 +10,7 @@ class WebServer(object):
         self.tcp_server_socket.listen(128)
 
     # 定义handle_request方法，用于接收信息与发送信息
-    def handle_requeest(self, new_socket, ip_port):
+    def handle_request(self, new_socket, ip_port):
         content = new_socket.recv(1024).decode('gbk')
         print(f'客户端地址：{ip_port}\n客户端发送信息：{content}')
         new_socket.send('信息已收到，over！'.encode('gbk'))
@@ -21,7 +21,7 @@ class WebServer(object):
         while True:  # 通过循环实现持续接收客户端信息
             new_socket, ip_port = self.tcp_server_socket.accept()  # accept可以阻塞程序执行，相当于input
             # 调用handle_request方法，接收和发送信息
-            self.handle_requeest(new_socket, ip_port)
+            self.handle_request(new_socket, ip_port)
             new_socket.close()
 
 
