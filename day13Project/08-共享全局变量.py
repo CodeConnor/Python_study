@@ -1,4 +1,3 @@
-import time
 import threading
 
 # 定义全局变量
