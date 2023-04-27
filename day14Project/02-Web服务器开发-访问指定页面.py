@@ -21,8 +21,10 @@ if __name__ == '__main__':
             # 切片, 获取页面信息和路径
             request_data = client_data.split(' ', maxsplit=2)
             request_path = request_data[1]
-
-        # 响应数据到客户端
+            # 如何用户没有指定访问具体页面，则默认访问首页
+            if request_path == '/':
+                request_path = '/index.html'
+            # 响应数据到客户端
             with open('html' + request_path, 'rb') as f:  # 读取html文件，使用 rb 模式是因为需要读音频视频文件等
                 html_data = f.read()
 
