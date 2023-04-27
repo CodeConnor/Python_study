@@ -27,15 +27,16 @@ if __name__ == '__main__':
             # 响应数据到客户端
             response_line = 'HTTP/1.1 200 OK\r\n'  # 响应行
             response_header = 'Server:PWB/1.1\r\n'  # 响应头
-            response_header += 'Content-Type:text/html; charset=utf-8\r\n'  # 设置响应头字符编码，显示中文
             response_body = ''.encode('utf-8')  # 给响应体初值
             # 根据情况选择响应体内容
             try:
                 with open('html' + request_path, 'rb') as f:  # 读取html文件，使用 rb 模式是因为需要读音频视频文件等
                     html_data = f.read()
                     response_body = html_data
+            # 当访问页面不存在报错时，返回以下提示
             except:
-                response_body = '很抱歉，您所访问的页面不存在\r\n'.encode('utf-8')
+                response_header += 'Content-Type:text/html; charset=utf-8\r\n'  # 设置响应头字符编码，显示中文
+                response_body = '很抱歉，您所访问的页面不存在！\r\n'.encode('utf-8')
             finally:
                 # 关键点：将以上数据拼接为HTTP响应报文
                 # 拼接，将字符串拼接然后编码为二进制数据，响应体不用编码，因为rb模式读出的数据即为二进制数据
