@@ -25,16 +25,39 @@ if __name__ == '__main__':
             if request_path == '/':
                 request_path = '/index.html'
             # 响应数据到客户端
-            with open('html' + request_path, 'rb') as f:  # 读取html文件，使用 rb 模式是因为需要读音频视频文件等
-                html_data = f.read()
-
-            # 关键点：将以上数据拼接为HTTP响应报文
             response_line = 'HTTP/1.1 200 OK\r\n'  # 响应行
             response_header = 'Server:PWB/1.1\r\n'  # 响应头
-            # 空行 => \r\n => 写在拼接中
-            response_body = html_data  # 响应体
-            # 拼接，将字符串拼接然后编码为二进制数据，响应体不用编码，因为rb模式读出的数据即为二进制数据
-            response_data = (response_line + response_header + '\r\n').encode('utf-8') + response_body
-            new_socket.send(response_data)
-            # 关闭套接字
-            new_socket.close()
+            response_header += 'Content-Type:text/html; charset=utf-8\r\n'  # 设置响应头字符编码，显示中文
+            response_body = ''.encode('utf-8')  # 给响应体初值
+            # 根据情况选择响应体内容
+            try:
+                with open('html' + request_path, 'rb') as f:  # 读取html文件，使用 rb 模式是因为需要读音频视频文件等
+                    html_data = f.read()
+                    response_body = html_data
+            except:
+                response_body = '很抱歉，您所访问的页面不存在\r\n'.encode('utf-8')
+            finally:
+                # 关键点：将以上数据拼接为HTTP响应报文
+                # 拼接，将字符串拼接然后编码为二进制数据，响应体不用编码，因为rb模式读出的数据即为二进制数据
+                response_data = (response_line + response_header + '\r\n').encode('utf-8') + response_body
+                new_socket.send(response_data)
+                new_socket.close()
+
+            # except:
+            #     response_line = 'HTTP/1.1 200 OK\r\n'  # 响应行
+            #     response_header = 'Server:PWB/1.1\r\n'  # 响应头
+            #     response_header += 'Content-Type:text/html; charset=utf-8\r\n'
+            #     response_body = '很抱歉，您所访问的页面不存在\r\n'.encode('utf-8')
+            #     response_data = (response_line + response_header + '\r\n').encode('utf-8') + response_body
+            #     new_socket.send(response_data)
+            # else:
+            #     response_line = 'HTTP/1.1 200 OK\r\n'  # 响应行
+            #     response_header = 'Server:PWB/1.1\r\n'  # 响应头
+            #     # 关键点：将以上数据拼接为HTTP响应报文
+            #     # 拼接，将字符串拼接然后编码为二进制数据，响应体不用编码，因为rb模式读出的数据即为二进制数据
+            #     response_data = (response_line + response_header + '\r\n').encode('utf-8') + response_body
+            #     new_socket.send(response_data)
+            #     # 关闭套接字
+            # finally:
+            #     new_socket.close()
+
