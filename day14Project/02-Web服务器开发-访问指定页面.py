@@ -35,6 +35,7 @@ if __name__ == '__main__':
                     response_body = html_data
             # 当访问页面不存在报错时，返回以下提示
             except:
+                response_line = 'HTTP/1.1 404 Not Found\r\n'
                 response_header += 'Content-Type:text/html; charset=utf-8\r\n'  # 设置响应头字符编码，显示中文
                 response_body = '很抱歉，您所访问的页面不存在！\r\n'.encode('utf-8')
             finally:
