@@ -7,3 +7,12 @@
 2023-05-09 11:53:51,277 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/6.jpg图片
 2023-05-09 11:53:51,277 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/5.jpg图片
 2023-05-09 11:53:51,559 - 11-在Web项目中整合日志.py[line:46] - root - INFO: 访问了/favicon.ico文件
+2023-05-09 13:35:39,245 - asyncio - DEBUG - Using selector: SelectSelector
+2023-05-09 13:36:38,529 - 11-在Web项目中整合日志.py[line:31] - INFO: 访问了/首页
+2023-05-09 13:36:38,669 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/0.jpg图片
+2023-05-09 13:36:38,670 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/1.jpg图片
+2023-05-09 13:36:38,673 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/2.jpg图片
+2023-05-09 13:36:38,674 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/6.jpg图片
+2023-05-09 13:36:38,674 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/4.jpg图片
+2023-05-09 13:36:38,675 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/3.jpg图片
+2023-05-09 13:36:38,675 - 11-在Web项目中整合日志.py[line:40] - INFO: 访问了/images/5.jpg图片

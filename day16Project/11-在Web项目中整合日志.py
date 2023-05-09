@@ -4,17 +4,14 @@ from fastapi import Response
 import uvicorn
 import logging
 
-
-
 # 输出日志信息到文件
 f = open('fastapi.log', 'a', encoding='utf-8')  # 创建文件保存日志信息
 # 调整日志输出的最低等级和日志格式
-# 格式：2023-05-09 10:17:37,066 - 10-logging日志信息.py[line:9] - root - DEBUG: 这是一条debug级别日志信息！
+# 格式：2023-05-09 10:17:37,066 - 10-logging日志信息.py[line:9] - DEBUG: 这是一条debug级别日志信息！
 logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(name)s - %(levelname)s: %(message)s',
+                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s',
                     # 输出日志到文件中
-                    stream=f
-                    )
+                    stream=f)
 
 # 创建FastAPI对象
 app = FastAPI()
