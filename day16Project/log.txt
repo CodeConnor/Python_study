@@ -1,0 +1,10 @@
+2023-05-09 11:28:59,423 - 10-logging日志信息.py[line:13] - root - DEBUG: 这是一条debug级别日志信息！
+2023-05-09 11:28:59,423 - 10-logging日志信息.py[line:14] - root - INFO: 这是一条info级别日志信息！！
+2023-05-09 11:28:59,431 - 10-logging日志信息.py[line:15] - root - WARNING: 这是一条warning级别日志信息！！！
+2023-05-09 11:28:59,431 - 10-logging日志信息.py[line:16] - root - ERROR: 这是一条error级别日志信息！！！！
+2023-05-09 11:28:59,431 - 10-logging日志信息.py[line:17] - root - CRITICAL: 这是一条critical级别日志信息！！！！！！
+2023-05-09 11:29:06,075 - 10-logging日志信息.py[line:13] - root - DEBUG: 这是一条debug级别日志信息！
+2023-05-09 11:29:06,082 - 10-logging日志信息.py[line:14] - root - INFO: 这是一条info级别日志信息！！
+2023-05-09 11:29:06,082 - 10-logging日志信息.py[line:15] - root - WARNING: 这是一条warning级别日志信息！！！
+2023-05-09 11:29:06,082 - 10-logging日志信息.py[line:16] - root - ERROR: 这是一条error级别日志信息！！！！
+2023-05-09 11:29:06,082 - 10-logging日志信息.py[line:17] - root - CRITICAL: 这是一条critical级别日志信息！！！！！！
