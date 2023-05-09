@@ -1,0 +1,9 @@
+2023-05-09 11:53:51,188 - 11-在Web项目中整合日志.py[line:28] - root - INFO: 访问了/首页
+2023-05-09 11:53:51,268 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/0.jpg图片
+2023-05-09 11:53:51,268 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/1.jpg图片
+2023-05-09 11:53:51,270 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/2.jpg图片
+2023-05-09 11:53:51,274 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/3.jpg图片
+2023-05-09 11:53:51,277 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/4.jpg图片
+2023-05-09 11:53:51,277 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/6.jpg图片
+2023-05-09 11:53:51,277 - 11-在Web项目中整合日志.py[line:37] - root - INFO: 访问了/images/5.jpg图片
+2023-05-09 11:53:51,559 - 11-在Web项目中整合日志.py[line:46] - root - INFO: 访问了/favicon.ico文件
